@@ -1,4 +1,4 @@
-# gae-map
+# Simple Mapreduce using Google AppEngine
 
 A simple map (without reduce) work distributor for Google AppEngine
 
