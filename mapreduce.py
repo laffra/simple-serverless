@@ -15,7 +15,6 @@
 
 """ This is a library that implements a simple mapreduce API.
 
-It does so by 
 """
 
 __author__ = """laffra@google.com (Chris Laffra)"""
