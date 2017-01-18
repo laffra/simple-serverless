@@ -1,8 +1,8 @@
-# Simple Mapreduce using Google AppEngine
+# A simple serverless service implementation using Google AppEngine
 
-A simple map (without reduce) work distributor for Google AppEngine
+Run stateless microservice functions in parallel on Google AppEngine
 
-Here is a typical run of the hosted application at [simple-mapreduce.appspot.com](http://simple-mapreduce.appspot.com/?workers=400&count=3000&latency=0.05):
+Here is a typical run of the hosted application at [serverless.appspot.com](http://simple-mapreduce.appspot.com/?workers=400&count=3000&latency=0.05):
 
     Number of zipcodes = 3000
     Addition simulated latency = 0.05s
