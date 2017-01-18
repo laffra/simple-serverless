@@ -2,7 +2,7 @@
 
 Run stateless microservice functions in parallel on Google AppEngine
 
-Here is a typical run of the hosted application at [serverless.appspot.com](http://simple-mapreduce.appspot.com/?workers=400&count=3000&latency=0.05):
+Here is a typical run of the hosted application at [serverless.appspot.com](http://simple-serverless.appspot.com/?workers=400&count=3000&latency=0.05):
 
     Number of zipcodes = 3000
     Addition simulated latency = 0.05s
