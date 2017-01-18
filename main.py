@@ -33,7 +33,7 @@ import urllib
 import webapp2
 
 SIMULATED_EXTRA_LATENCY = 0.05
-ZIPCODE_COUNT = 10
+ZIPCODE_COUNT = 3000
 
 
 @serverless.parallel
@@ -71,7 +71,7 @@ class ZipCodeHandler(webapp2.RequestHandler):
         duration = sum(f.duration for f in pipeline.steps)
 
         # Produce output in HTML.
-        self.response.write('<h1>Serverless Pipeline Demo</h1>')
+        self.response.write('<b>Serverless Pipeline Demo</b><p>')
         self.response.write('Number of zipcodes = %d<br>' % ZIPCODE_COUNT)
         self.response.write('Regular duration = %.2fs<br>' % normal_duration)
         self.response.write('Parallel duration = %.2fs<br>' % duration)

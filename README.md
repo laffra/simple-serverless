@@ -2,17 +2,25 @@
 
 Run stateless microservice functions in parallel on Google AppEngine
 
-Here is a typical run of the hosted application at [serverless.appspot.com](http://simple-serverless.appspot.com/?workers=400&count=3000&latency=0.05):
+Here is a typical run of the hosted application at [simple-serverless.appspot.com](http://simple-serverless.appspot.com):
 
+    *Serverless Pipeline Demo*
     Number of zipcodes = 3000
-    Addition simulated latency = 0.05s
-    428 workers, took 4.20s
-    Regular duration = 150.15s
-    Parallel duration = 5.59s
-    Speedup = 26.9X
+    Regular duration = 345.57s
+    Parallel duration = 18.98s
+    Speedup = 18.2X
+    Details per pipeline step:
+      1 - Step "geolocate" took 18.65s for 100 workers and 3000 elements
+      2 - Step "cleanup" took 0.34s for 100 workers and 3000 elements
+      3 - Step "sort" took 0.00s for 1 worker and 413 elements
 
-It uses Google geocoding service calls to resolve zipcodes to addresses. Each call is really fast, as the app and the geocoding service are colocated in the same datacenter. Therefore we add a small simulated latency of 50ms, to mimic the job taking some work.
+This demo uses Google geocoding service calls to resolve zipcodes to addresses.
+Each call is really fast, as the app and the geocoding service are colocated
+in the same datacenter. Therefore we add a small simulated latency of 50ms,
+to mimic the job taking some work.
 
-In the above run, we resolved 3,000 zipcodes in less than 6 seconds, while normal execution would take 2,5 minutes.
+In the above run, we resolved 3,000 zipcodes in 20 seconds, while normal
+execution would take almost 6 minutes.
 
-Execution speedup depends on the number of workers, how long the longest chunk takes, and load balancing imposed by GAE.
+Execution speedup depends on the number of workers, how long the longest
+chunk takes, and load balancing imposed by GAE.
