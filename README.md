@@ -19,8 +19,9 @@ Each call is really fast, as the app and the geocoding service are colocated
 in the same datacenter. Therefore we add a small simulated latency of 50ms,
 to mimic the job taking some work.
 
-In the above run, we resolved 3,000 zipcodes in 20 seconds, while normal
-execution would take almost 6 minutes.
+In the above run, we resolved 3,000 zipcodes in ~19 seconds, while normal
+execution would take almost 6 minutes. Actual speedup depends on how many nodes
+are current warmed up. A second run typically runs faster.
 
 Execution speedup depends on the number of workers, how long the longest
 chunk takes, and load balancing imposed by GAE.
