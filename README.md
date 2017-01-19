@@ -1,4 +1,4 @@
-# A simple serverless service implementation using Google AppEngine
+# Simple serverless services for Google AppEngine
 
 Run stateless microservice functions in parallel on Google AppEngine
 
