@@ -143,7 +143,7 @@ are completely context free. The _cleanup_ function is executed in parallel:
     def cleanup(addresses):
         return filter(None, addresses)
 
-The _sort_ function is executed in sequentially, in the current thread, on all the collated
+The _sort_ function is executed sequentially, in the current thread, on all the collated
 results from the previous step in the pipeline:
 
     @serverless.sequential
