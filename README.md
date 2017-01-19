@@ -152,3 +152,9 @@ results from the previous step in the pipeline:
         
 The entire implementation of this simple serverless library is just 230 lines of Python,
 slightly more than the length of this README file. 
+
+*Disclaimer*: This work is a personal weekend project and is unrelated to (Google Cloud 
+Functions)[https://cloud.google.com/functions/], a serverless functions solution based on
+Node.js and (Google Dataflow for
+Python)[https://cloud.google.com/dataflow/docs/quickstarts/quickstart-python],
+a more comprehensive solution for data-driven distribubted programming pipelines.
