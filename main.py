@@ -33,7 +33,8 @@ import urllib
 import webapp2
 
 SIMULATED_EXTRA_LATENCY = 0.05
-ZIPCODE_COUNT = 3000
+ZIPCODE_COUNT = 3
+SERVERLESS_SECRET = '27d9d75205fed75d3499bd872f237176'
 
 
 @serverless.parallel
@@ -103,6 +104,6 @@ def get_address(zipcode):
 
 app = webapp2.WSGIApplication([
     ('/', ZipCodeHandler),
-    serverless.init('/serverless', '27d9d75205fed75d3499bd872f237176')
+    serverless.init('/serverless_route', SERVERLESS_SECRET)
 
 ], debug=True)
